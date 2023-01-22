@@ -46,5 +46,3 @@ export default function App() {
     </Provider>
   )
 }
-
-export default App;
