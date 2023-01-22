@@ -6,7 +6,9 @@ export default function questionCreator(list) {
     if (langSelection === 0) {
         const ChosenWord = wordPicker(list);
 
-        let Options = [wordPicker(list).word, wordPicker(list).word, wordPicker(list).word, wordPicker(list).word]
+        let clonedList = [...list];
+
+        let Options = [wordPicker(clonedList).word, wordPicker(clonedList).word, wordPicker(clonedList).word, wordPicker(clonedList).word]
 
         if (!Options.includes(ChosenWord.word)) {
             Options[Math.floor(Math.random() * Options.length)] = ChosenWord.word;
@@ -21,7 +23,9 @@ export default function questionCreator(list) {
     else {
         const ChosenWord = wordPicker(list);
 
-        let Options = [wordPicker(list).translation, wordPicker(list).translation, wordPicker(list).translation, wordPicker(list).translation]
+        let clonedList = [...list];
+
+        let Options = [wordPicker(clonedList).translation, wordPicker(clonedList).translation, wordPicker(clonedList).translation, wordPicker(clonedList).translation]
 
         if (!Options.includes(ChosenWord.word)) {
             Options[Math.floor(Math.random() * Options.length)] = ChosenWord.translation;
@@ -35,4 +39,3 @@ export default function questionCreator(list) {
 
     }
 }
-
