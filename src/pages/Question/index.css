@@ -1,0 +1,10 @@
+.question,
+.options-wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.option {
+  padding: 10px;
+  margin: 30px;
+}
