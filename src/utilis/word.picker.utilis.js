@@ -1,8 +1,10 @@
 export default function wordPicker(list) {
-        return list[randomRange(list.length)]
+    let index = randomRange(list.length);
+    let word = list.splice(index, 1)
+    return word[0];
 }
 
 
 function randomRange(length) {
-    return Math.floor(Math.random()*length);
+    return Math.floor(Math.random() * length);
 }
