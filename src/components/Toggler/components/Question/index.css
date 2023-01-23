@@ -15,19 +15,19 @@
   border-top-left-radius: 75px;
   border-top-right-radius: 75px;
   background-color: #ffe4e1;
-  padding-top: 30px;
+  padding-top: 20px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri !important;
 }
 .footer {
   border-top-left-radius: 75px;
   border-top-right-radius: 75px;
   background-color: #1d0300;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 .footer-toolbar {
   border-top-left-radius: 75px;
   border-top-right-radius: 75px;
-  padding: 25px 30px;
+  padding: 20px 30px;
 }
 .footer::before {
   display: none;
@@ -37,14 +37,14 @@
   text-align: center;
   font-weight: bold;
   font-size: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .footer-text {
   color: #fff;
   text-align: center;
   font-weight: bold;
-  font-size: 25px;
-  margin-bottom: 25px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 .option-text {
   border-top-left-radius: 75px;
@@ -57,7 +57,7 @@
   padding: 0 10px;
   text-align: center;
   font-size: 18px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri !important;
+   font-family: "Gill Sans", "Gill Sans MT", Calibri !important;
 }
 .options:last-child {
   margin-bottom: 50px;
