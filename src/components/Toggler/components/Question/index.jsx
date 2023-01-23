@@ -11,7 +11,7 @@ export default function Question(props) {
 
   let { value, isDone, start } = useTimer(10);
 
-  const HandleClick = (e) => {
+  const HandleOnClick = (e) => {
     let answer = e.target.textContent;
 
     props.handler(answer);
@@ -32,7 +32,7 @@ export default function Question(props) {
       <h4>{selectedQuestion.word}</h4>
       {selectedQuestion.Options.map((option) => {
         return (
-          <button key={randomString()} onClick={HandleClick}>
+          <button key={randomString()} onClick={HandleOnClick}>
             {option}
           </button>
         );
