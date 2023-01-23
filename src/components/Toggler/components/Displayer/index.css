@@ -1,0 +1,29 @@
+.end-page {
+  background-color: #fff3e1;
+}
+.end-page-header {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.end-page-title {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  text-align: center;
+  font-size: 30px;
+  padding:20px 0;
+}
+.end-page-content {
+  --background: #fff3e1;
+  border-radius: 10px;
+}
+.end-page-score {
+  margin-top: 30px;
+  --background: #fff3e1;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+.wrong-answer-item{
+    font-size: 18px;
+}
