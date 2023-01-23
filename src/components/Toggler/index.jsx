@@ -18,6 +18,7 @@ import {
   quizSelectedQuestionAction,
   quizSetQuestionListAction,
 } from "../../Store/quiz/quiz.action.creators";
+import { IonPage } from "@ionic/react";
 
 export default function Toggler() {
   const Store = useSelector((state) => state);
@@ -71,11 +72,13 @@ export default function Toggler() {
   return (
     <>
       {chosenIndex < 10 ? (
+        <IonPage>
         <Question
           key={randomString()}
           handler={HandleAnswer}
           questionCount={chosenIndex + 1}
         />
+        </IonPage>
       ) : (
         <Displayer />
       )}
