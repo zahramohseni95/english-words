@@ -40,8 +40,8 @@ export default function Question(props) {
           {props.questionCount + " / 10"}
         </IonBadge>
       </IonHeader>
-      <IonContent className="ion-padding">
-        <h1>Find the right translation for selected word</h1>
+      <IonContent className="question-text ion-padding">
+        <h1>Find the right translation for selected word:</h1>
       </IonContent>
       <div className=" footer-wrapper">
         <IonTitle className="footer-timer">{value}</IonTitle>
