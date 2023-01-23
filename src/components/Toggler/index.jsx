@@ -7,8 +7,6 @@ import { getFromLocalStorage } from "../../utilis/get.from.localstorage.utilis";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux/es/exports";
 import { useDispatch } from "react-redux/es/exports";
-//css
-import "./index.css";
 //components
 import Question from "./components/Question";
 import Displayer from "./components/Displayer";
@@ -73,11 +71,11 @@ export default function Toggler() {
     <>
       {chosenIndex < 10 ? (
         <IonPage>
-        <Question
-          key={randomString()}
-          handler={HandleAnswer}
-          questionCount={chosenIndex + 1}
-        />
+          <Question
+            key={randomString()}
+            handler={HandleAnswer}
+            questionCount={chosenIndex + 1}
+          />
         </IonPage>
       ) : (
         <Displayer />
