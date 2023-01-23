@@ -1,22 +1,43 @@
 import randomString from "../../../../utilis/random.string.utilis";
+//hooks
+import { useSelector } from "react-redux";
+import { useTimer } from "../../../../hooks/timer.hook";
+import { useEffect } from "react";
 
 export default function Question(props) {
+  const Store = useSelector((state) => state);
 
-    // take the answer by handleOnClick function
+  const selectedQuestion = Store.question;
 
-    const handleOnClick = (e) => {
-        let answer = e.target.textContent;
+  let { value, isDone, start } = useTimer(10);
 
-        props.handler(answer)
+  const HandleClick = (e) => {
+    let answer = e.target.textContent;
+
+    props.handler(answer);
+  };
+
+  useEffect(() => {
+    start();
+
+    if (isDone) {
+      props.handler("");
     }
-    return (
-        <div className="question">
-            <h2>{props.questionCount}</h2>
-            <h2>Find the right translation for selected word</h2>
-            <h4>{props.title}</h4>
-            {props.options.map((option) => {
-                return <button key={randomString()} onClick={handleOnClick}>{option}</button>
-            })}
-        </div>
-    )
+  }, [value]);
+
+  return (
+    <div className="question">
+      <h2>{props.questionCount + " / 10"}</h2>
+      <h2>Find the right translation for selected word</h2>
+      <h4>{selectedQuestion.word}</h4>
+      {selectedQuestion.Options.map((option) => {
+        return (
+          <button key={randomString()} onClick={HandleClick}>
+            {option}
+          </button>
+        );
+      })}
+      <h3>{value}</h3>
+    </div>
+  );
 }

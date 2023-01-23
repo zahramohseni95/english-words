@@ -19,6 +19,8 @@ export default function questionCreator(list) {
         };
     }
     else {
+
+
         const ChosenWord = wordPicker(list);
 
         let Options = [wordPicker(list).translation, wordPicker(list).translation, wordPicker(list).translation, wordPicker(list).translation]
@@ -35,4 +37,3 @@ export default function questionCreator(list) {
 
     }
 }
-

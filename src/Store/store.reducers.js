@@ -1,7 +1,11 @@
 import { combineReducers } from "redux";
-import quizReducer from "./quiz/quiz.date.reducer";
+import mistakesReducer from "./quiz/quiz.mistakes.reducer";
+import questionReducer from "./quiz/quiz.selected.question.reducer";
+import questionListReducer from "./quiz/quiz.set.question.list.reducer";
 
 
 export const reducers = combineReducers({
-    quizReducer,
+    mistakes: mistakesReducer,
+    question: questionReducer,
+    questionlist: questionListReducer,
 })
