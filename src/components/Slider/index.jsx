@@ -22,7 +22,7 @@ export default function Slider() {
             <IonSlide className="Slide-section">
                 <div className="section">
                     <h1>Click here to start</h1>
-                    <Link to="/Quiz">Start</Link>
+                     <IonButton color="success" routerLink="/Quiz">Let`s Go!</IonButton>
                 </div>  
             </IonSlide>
         </IonSlides>
