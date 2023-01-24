@@ -10,15 +10,13 @@ import {
   IonToolbar,
   IonContent,
   IonList,
-  IonItem,
   IonText,
   IonRow,
-  IonCol,
   IonGrid,
   useIonToast,
-        IonLabel,
-        IonItemDivider, 
-        IonButton, useIonAlert, 
+  IonLabel,
+  IonItemDivider,
+  IonButton, useIonAlert,
 } from "@ionic/react";
 //styles
 import "./index.css";
@@ -57,13 +55,7 @@ export default function Displayer() {
   })
   const [present] = useIonToast();
 
-  const presentToast = (position) => {
-    present({
-      message: 'Hello World!',
-      duration: 1500,
-      position: position
-    });
-  };
+
 
 
   return (
@@ -80,55 +72,40 @@ export default function Displayer() {
           </IonToolbar>
         </IonHeader>
         <IonToolbar className="end-page-score">
-          {<IonButton key={randomString()}
+          {<IonButton className="BTN" mode="ios" key={randomString()}
             onClick={() =>
               presentAlert({
                 header: `${displayScore > 50 ? "Good Job!" : "Try Harder!"}`,
                 message: `Your Score : ${displayScore}`,
                 buttons: ["OK!"],
+                mode:"ios"
               })
             }
           >
             Your Score!
           </IonButton>}
         </IonToolbar>
-        
+
         <IonItemDivider className="end-page-score">
           <IonLabel className="end-page-score">
-            Your Mistake!
+            Your Mistake! Practice Them
           </IonLabel>
         </IonItemDivider>
         <IonContent className="end-page-content">
-
-                    {/*  create mistake by TOOOOOOAAAAAAST */}
-
-          {mistakes.map(mistake => {
-            return (
-                
-              <IonButton key={randomString()} expand="block" onClick={() => {
-                present({
-                  message: `${mistake.trueAnswer}`,
-                  duration: 1500,
-                  position: "bottom"
-                });
-              }}>{mistake.chosenword}</IonButton>
-            )
-          })}
-          {/*  create mistake by ALLLLLLEEEEEERT */}
           <IonList inset={true}>
-            
+
             <IonGrid>
               <IonRow className="wrong-answer-item">
                 {mistakes.map(mistake => {
                   return (
-                    <IonButton expand="block" key={randomString()}
+                    <IonButton className="BTN" expand="block" key={randomString()}
                       onClick={() =>
                         presentAlert({
                           header: `${mistake.chosenword}`,
 
                           message: `${mistake.trueAnswer}`,
-                          buttons: ["OK!"],
-
+                          buttons: ["Got It!"],
+                          mode:"ios"
 
                         })
                       }
