@@ -336,7 +336,7 @@ export const Wordlist = [
         translation: 'ترس'
     },
     {
-        word: 'Frightning',
+        word: 'Frightening',
         translation: 'ترسناک'
     },
     {
@@ -400,6 +400,3 @@ export const Wordlist = [
         translation: 'مجلس'
     },
 ]
-
-console.log(Wordlist.length)
-

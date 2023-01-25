@@ -1,7 +1,17 @@
-// import { Redirect, Route } from 'react-router-dom';
+
+//Components
+import { Redirect, Route } from 'react-router-dom';
 import {
+  IonRouterOutlet,
   setupIonicReact
 } from '@ionic/react';
+import { IonReactRouter } from '@ionic/react-router';
+import Toggler from './components/Toggler';
+import Slider from './components/Slider';
+//Store
+import { store } from './Store/store';
+//react-redux
+import { Provider } from 'react-redux';
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -28,8 +38,18 @@ setupIonicReact();
 
 export default function App() {
   return (
-    <div>
-      1
-    </div>
+
+    <Provider store={store}>
+      <IonReactRouter>
+        <IonRouterOutlet>
+          <Route path="/dashboard" component={Slider} />
+          <Route path="/Quiz" component={Toggler} />
+          <Redirect exact from='/' to='/dashboard' />
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </Provider>
+  )
+
+   
   );
 }
