@@ -1,3 +1,4 @@
+
 //Components
 import { Redirect, Route } from 'react-router-dom';
 import {
@@ -11,6 +12,7 @@ import Slider from './components/Slider';
 import { store } from './Store/store';
 //react-redux
 import { Provider } from 'react-redux';
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -31,10 +33,12 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+
 setupIonicReact();
 
 export default function App() {
   return (
+
     <Provider store={store}>
       <IonReactRouter>
         <IonRouterOutlet>
@@ -45,4 +49,7 @@ export default function App() {
       </IonReactRouter>
     </Provider>
   )
+
+   
+  );
 }
